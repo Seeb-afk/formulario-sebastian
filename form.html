@@ -125,13 +125,36 @@
             </label>
           </div>
 
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-1">
             <span class="font-semibold text-slate-800">
               Areas de interés 
               <span class="text-slate-500 text-sm">(Mínimo 1, máximo 3)</span>
             </span>
             
-            
+            <label for="frontendForm" class="text-slate-800 font-semibold text-sm">
+              <input type="checkbox" id="frontendForm" name="intereses" value="Frontend">
+              Frontend
+            </label>
+
+            <label for="backendForm" class="text-slate-800 font-semibold text-sm">
+              <input type="checkbox" id="backendForm" name="intereses" value="Backend">
+              Backend
+            </label>
+
+            <label for="diseñoForm" class="text-slate-800 font-semibold text-sm">
+              <input type="checkbox" id="diseñoForm" name="intereses" value="Diseño UI-UX">
+              Diseño UI-UX
+            </label>
+
+            <label for="iaForm" class="text-slate-800 font-semibold text-sm">
+              <input type="checkbox" id="iaForm" name="intereses" value="Inteligencia Artificial">
+              Inteligencia Artificial
+            </label>
+
+            <label for="datosForm" class="text-slate-800 font-semibold text-sm">
+              <input type="checkbox" id="datosForm" name="intereses" value="Bases de datos">
+              Bases de datos
+            </label>
           </div>
         </fieldset>
 
@@ -143,19 +166,26 @@
 
           <div class="flex flex-col">
             <label for="claveForm" class="font-semibold text-slate-800">Contraseña</label>
-            <input type="text" id="claveForm" placeholder="Debe contener mayúsculas, minúsculas, números y caracteres especiales" class="border border-slate-300 rounded-md p-2">
+            <input type="password" id="claveForm" placeholder="Debe contener mayúsculas, minúsculas, números y caracteres especiales" class="border border-slate-300 rounded-md p-2">
           </div>
 
           <div class="flex flex-col">
             <label for="validarForm" class="font-semibold text-slate-800">Confirmar contraseña</label>
-            <input type="text" id="validarForm" placeholder="Repite la misma contraseña" class="border border-slate-300 rounded-md p-2">
+            <input type="password" id="validarForm" placeholder="Repite la misma contraseña" class="border border-slate-300 rounded-md p-2">
           </div>
 
         </fieldset>
 
+        <label for="terminosForm" class="text-slate-800 text-sm">
+          <input type="checkbox" id="terminosForm" >
+          Acepto los términos y condiciones
+        </label>
+
         <button type="submit" class="bg-sky-500 hover:bg-sky-600 active:bg-sky-700 text-white rounded-lg py-2 font-semibold shadow-sm">
           Registrarse
         </button>
+
+        <ul id="contenedorMensaje"></ul>
       </form>
     </div>
     <script src="./main.js"> 
