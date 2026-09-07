@@ -83,11 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let mensaje = document.getElementById("contenedorMensaje");
     
     if (errores.length > 0) {
-      mensaje.classList.add(
-        "p-4",
-        "bg-red-500",
-        "rounded-lg"
-      );
+      mensaje.className = "p-4 bg-red-500 rounded-lg text-red-100";
       mensaje.innerHTML = errores.map(err => `<ul class="text-red-100">${err}</ul>`).join("");
       return;
     }
@@ -136,22 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (errores.length > 0) {
-      mensaje.classList.add(
-        "p-4",
-        "bg-red-500",
-        "rounded-lg"
-      );
+      mensaje.className = "p-4 bg-red-500 rounded-lg text-red-100";
       mensaje.innerHTML = errores.map(err => `<ul class="text-red-100">${err}</ul>`).join("");
       return;
     }
 
-    mensaje.classList.add(
-        "p-4",
-        "bg-green-500",
-        "rounded-lg"
-      );
+    mensaje.className = "p-4 bg-green-500 rounded-lg text-green-100";
     mensaje.innerHTML = `<ul class="text-green-100">Se han enviado tus datos</ul>`;
-    return;
+    formulario.reset();
   });
 });
 
