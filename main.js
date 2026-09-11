@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // Validadores de campos
     let nombreRegex = /^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s']+$/i; //Se arregla el \s, en el codigo original estaba asi /s
     let correoRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     let cedulaRegex = /^(?:[Vv]-?)?\d{6,8}$/
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let edad = hoy.getFullYear() - fechaNac.getFullYear();
 
+    // Valida si los datos ingresados cumplen con lo requerido
     if (!nombreRegex.test(datosUsuario.nombre.trim())) {
       errores.push("El nombre no cumple con lo solicitado.");
     };
